@@ -1,0 +1,6 @@
+*.yml
+/.scrapy
+/build
+/project.egg-info
+__pycache__/
+*.swp
