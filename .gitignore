@@ -4,3 +4,4 @@
 /project.egg-info
 __pycache__/
 *.swp
+*.env
