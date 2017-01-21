@@ -2,10 +2,10 @@ import scrapy
 from trpgLetter.items import TrpgLetterItem
 import re
 
-article = TrpgLetterItem()
 
 # crawl arclightTRPG News
-class arclightSpider(scrapy.Spider):
+class ArclightSpider(scrapy.Spider):
+    article = TrpgLetterItem()
     name = "arcspider"
     allowed_domains = ["r-r.arclight.co.jp/info"]
     start_urls = ['http://r-r.arclight.co.jp/info/']
@@ -24,7 +24,8 @@ class arclightSpider(scrapy.Spider):
         yield article
 
 # crawl FEAR NEWS
-class fearSpider(scrapy.Spider):
+class FearSpider(scrapy.Spider):
+    article = TrpgLetterItem()
     name = "fearspider"
     allowed_domains = ["www.fear.co.jp"]
     start_urls = ['http://www.fear.co.jp/upd.htm']
@@ -41,7 +42,8 @@ class fearSpider(scrapy.Spider):
 
 
 # crawl FEAR System NEWS
-class fearSystemSpider(scrapy.Spider):
+class FearSystemSpider(scrapy.Spider):
+    article = TrpgLetterItem()
     name = "fearsystemspider"
     allowed_domains = ["www.fear.co.jp"]
     start_urls = ['http://www.fear.co.jp']
@@ -62,7 +64,8 @@ class fearSystemSpider(scrapy.Spider):
             yield article
 
 # crawl SaikoroFiction NEWS
-class saikoroFictionSpider(scrapy.Spider):
+class SaikoroFictionSpider(scrapy.Spider):
+    article = TrpgLetterItem()
     name = "saificspider"
     allowed_domains = ["www.bouken.jp"]
     start_urls = ['http://www.bouken.jp/pd/sf/index.html']
